@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Base L2 Token Monitor
+
+A comprehensive token monitoring dashboard for the Base L2 blockchain network. This application provides real-time analytics, AI-powered insights, and comprehensive monitoring tools for tokens on the Base L2 network.
+
+## Features
+
+### User Authentication
+- Connect crypto wallets (MetaMask, WalletConnect)
+- Secure session management
+- Base L2 network authentication
+
+### Token Registration System
+- Add tokens by contract address
+- Automated metadata fetching
+- Custom alerts and thresholds
+- Token management interface
+
+### Monitoring Dashboard
+- Real-time price tracking
+- Historical price charts
+- Transaction volume visualization
+- Liquidity pool analysis
+- Market cap and token metrics
+
+### AI-Powered Analysis
+- Automated report generation
+- Sentiment analysis from social media
+- Price movement pattern recognition
+- Risk assessment scoring
+- Trading volume anomaly detection
+- Export options (PDF/CSV)
+
+## Technology Stack
+
+- **Frontend**: Next.js 14+, React 19, TypeScript
+- **Design**: Tailwind CSS, ShadCn UI components
+- **Blockchain Integration**: Ethers.js, viem, wagmi
+- **State Management**: Zustand
+- **Charts**: Chart.js, react-chartjs-2
+- **AI Analysis**: Custom NLP processing, time-series analysis
+
+## Project Structure
+
+```
+src/
+├── app/                  # Next.js App Router
+│   ├── auth/             # Authentication pages
+│   ├── dashboard/        # Dashboard section
+│   │   ├── analytics/    # Analytics pages
+│   │   ├── insights/     # AI insights pages
+│   │   ├── reports/      # Report generation
+│   │   ├── settings/     # User settings
+│   │   └── tokens/       # Token management
+│   └── api/              # API routes
+├── components/           # Shared React components
+│   ├── ui/               # UI components from ShadCn
+│   ├── charts/           # Chart components
+│   ├── forms/            # Form components
+│   └── token/            # Token-specific components
+├── lib/                  # Shared utility functions
+│   ├── blockchain/       # Blockchain integration
+│   ├── api/              # API client functions
+│   └── ai/               # AI analysis functions
+└── store/                # State management
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+
+- Yarn package manager
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/base-l2-token-monitor.git
+   cd base-l2-token-monitor
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
 
-## Learn More
+3. Start the development server:
+   ```bash
+   yarn dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data Flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. User connects wallet (auth)
+2. Registered tokens are stored and associated with user account
+3. Dashboard pulls data from Base L2 blockchain RPC endpoints
+4. AI analysis processes on-chain data and external sources
+5. Visualizations are updated in real-time
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built with ❤️ for the Base L2 ecosystem
