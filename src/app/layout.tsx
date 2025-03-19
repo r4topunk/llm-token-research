@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Base L2 Token Monitor",
-  description: "Advanced monitoring and analytics for tokens on the Base L2 blockchain",
+  title: "Token AI Analyzer",
+  description: "AI-powered analysis and insights for any token",
 };
 
 export default function RootLayout({
@@ -35,7 +35,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="min-h-screen bg-background">
+            {children}
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>
